@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 main{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
     align-items: center;
     font-family: 'Poppins', sans-serif;
 }
@@ -16,6 +17,7 @@ main{
     height: 646px;
     border-radius: 30px;
     padding-left: 111px;
+    margin-bottom: 2%;
 
 }
 .banner{
@@ -34,7 +36,7 @@ main{
 .banner_info{
     font-size: 16px;
 }
-.red_button{
+.red_button {
     width: 187px;
     height: 56px;
     padding: 16px;
@@ -42,9 +44,193 @@ main{
     font-size: 20px;
     color: #ffffff;
     background-color:#DD0000 ;
+    border: none;
 }
 
 .banner img{
     width: 581px;
     height: 613px;
+}
+/* ------------
+        Blogs
+----------------*/
+.Blogs{
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    gap: 30px;
+    justify-items: center;
+    padding: 60px;
+    
+}
+.navigator{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    width: 312px;
+    height: 312px;
+    background-color: #161616;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+.navigator .white-blog ,.red-blog {
+    width: 252px;
+    height: 64px;
+    margin: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: black;
+    
+}
+.red-blog{
+    background-color: #DD0000;
+    color: white;
+    
+    
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    
+}
+.card{
+    box-shadow: 1px 2px 4px gray;
+    border-radius: 10px;
+    width: 312px;
+    height: 362px;
+    padding:1% ;
+  
+}
+
+ .transfer-tittle p{
+    border: 1px solid #161616;
+    width: 100px;
+    padding: 4px;
+    text-align: center;
+  
+ }
+.transfer-icon{
+    display: flex;
+    padding: 0px 4px;
+    gap: 20px;
+       
+}
+
+
+
+/* Media Query */
+/* Mobile */
+@media only screen and (max-width:688px){
+ .container{
+        background-color: #161616;
+        width: 334px;
+        height: 472px;
+        border-radius: 30px;
+        padding: 37px;
+    
+    }
+.banner{
+   grid-template-columns: repeat(1,1fr);
+   justify-items: center;
+}
+.details{
+    padding: 20px;
+    
+}
+
+.banner_tittle{
+    font-weight: 700;
+    font-size: 22px;
+}
+.red_button{
+    
+    width: 161px;
+    height: 46px;
+    padding: 10px;
+    font-size: 18px;
+    margin-left: 45px;
+}
+.banner_info{
+    font-size: 14px;
+}
+.banner img{
+    margin-top: 20px;
+    width: 233px;
+    height: 245px;
+}
+/* ---------
+    Blogs
+--------- */
+
+.Blogs , .cards{
+    grid-template-columns: repeat(1,1fr);
+     }
+     .navigator{
+        background-color: #ffffff;
+        border: none;
+        margin: 0%;
+    }
+  
+
+}
+/* Ipad */
+@media only screen and (min-width:688px) and (max-width:992px){
+    .container{
+        width: 734px;
+        height: 398px;
+        /* padding-left: 20px; */
+    }
+    .banner_tittle{
+        font-weight: 700;
+        font-size: 40px;
+    }
+    .banner_info{
+        font-size: 14px;
+    }
+    .banner img{
+        width: 323px;
+        height: 340px;
+    }
+    /* ------------
+            Blogs
+    -------- */
+    .Blogs{
+        grid-template-columns: repeat(1,1fr);
+        gap: 25px;
+        padding: 0%;
+   }
+    .navigator{  
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        background-color: #ffffff;
+       border: none;
+        margin: 0%;
+    }
+    .white-blog{
+        width: 230px;
+        height: 64px; 
+        color: #161616;
+        background-color:#ffffff;
+        border: 2px solid gray;
+    }
+    
+    .cards{
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 40px;
+      
+    }
+    .card{
+        width: 357px;
+        height: 415px;
+        /* border: 2px solid black; */
+    }
+    .card img{
+        width: 100%;
+    }
+
+    
 }
