@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
 main{
     display: flex;
     flex-direction: column;
-    
     align-items: center;
-    font-family: 'Poppins', sans-serif;
+    
 }
 
 /* -----------
@@ -13,11 +17,11 @@ main{
 -------------- */
 .container{
     background-color: #161616;
-    width: 1321px;
-    height: 646px;
+    width: 80%;
+
     border-radius: 30px;
     padding-left: 111px;
-    margin-bottom: 2%;
+    margin: 2%;
 
 }
 .banner{
@@ -31,7 +35,7 @@ main{
 }
 .banner_tittle{
     font-weight: 700;
-    font-size: 70px;
+    font-size: 60px;
 }
 .banner_info{
     font-size: 16px;
@@ -75,7 +79,7 @@ main{
     justify-content: center;
 
 }
-.navigator .white-blog ,.red-blog {
+/* .navigator .white-blog ,.red-blog {
     width: 252px;
     height: 64px;
     margin: 20px;
@@ -83,11 +87,27 @@ main{
     font-size: 20px;
     color: black;
     
+} */
+.white-blog ,.red-blog{
+    text-decoration: none;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    width: 252px;
+    height: 64px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color:white;
+    margin: 4%;
+    border: none;
+    
 }
 .red-blog{
+    color: black;
     background-color: #DD0000;
     color: white;
-    
+
     
 }
 .cards{
@@ -118,7 +138,52 @@ main{
     gap: 20px;
        
 }
+.view-all{
+  visibility: hidden;
+}
+.flag{
+    display: grid;
+    grid-template-columns: repeat(1 ,1fr);
+    align-content: center;
+    justify-items: center;
+    width: 312px;
+    height: 242px;
+  
+}
+.flag-img{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+}
+/* --------
+        Footer 
+----------*/
+footer{
+    background-color: #161616;
+    color: #ffffff;
+    margin-top: 2%;
+}
 
+.goal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 40px;
+  
+}
+hr{
+    border: 1px solid #D1D1D1;
+    width: 98%;
+    margin: 50px
+}
+.policy{
+    display: grid;
+    grid-template-columns: repeat(6 ,1fr);
+    justify-items: center;
+}
+.goal-footer{
+    padding: 130px;
+}
 
 
 /* Media Query */
@@ -173,7 +238,15 @@ main{
         border: none;
         margin: 0%;
     }
-  
+    .view-all{
+        visibility: visible;
+    }
+  /* --------
+  Footer
+  ------ */
+  .policy{
+    grid-template-columns: repeat(1,1fr) ;
+    }
 
 }
 /* Ipad */
@@ -194,6 +267,7 @@ main{
         width: 323px;
         height: 340px;
     }
+   
     /* ------------
             Blogs
     -------- */
@@ -230,6 +304,14 @@ main{
     }
     .card img{
         width: 100%;
+    }
+    .view-all{
+        visibility: visible;
+    }
+    /* Footer */
+    .policy{
+        grid-template-columns: repeat(4,1fr) ;
+        
     }
 
     
